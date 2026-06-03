@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..950&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Outfit", Georgia, serif;
+  --font-sans: "Outfit", system-ui, -apple-system, sans-serif;
+  
+  --color-brand-primary: #4E342E;   /* Rich Espresso / Dark Chocolate Brown */
+  --color-brand-accent: #CD8177;    /* Warm Rose / Terracotta Coral Accent */
+  --color-brand-bg: #F3E7DF;        /* Soft Warm Cream Sand Background */
+  --color-brand-surface: #FAF4EF;   /* Soft Luxurious Light Peach/Alabaster Surface */
+  --color-brand-card: #F4EFEA;      /* Warm Luxury Card Off-White */
+  --color-brand-border: #E5D3C7;    /* Subtle Warm Nude Border */
+}
+
+/* Elegant luxury animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-10px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom base global overrides */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-surface);
+  color: #1F2937;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgba(78, 52, 46, 0.04), 0 2px 12px -4px rgba(78, 52, 46, 0.03);
+}
+
+.shadow-luxury {
+  box-shadow: 0 16px 36px -4px rgba(78, 52, 46, 0.08), 0 4px 16px -6px rgba(78, 52, 46, 0.05);
+}
